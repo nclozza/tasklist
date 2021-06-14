@@ -13,4 +13,5 @@
 
 - Check the URL where the backend service was initialized; if it is not `https://localhost:44348` please change it in `Frontend/src/configuration/API.js`
 - Open a terminal and `cd` into the `Frontend` directory
+- Run the command `npm install`
 - Run the command `npm start`
