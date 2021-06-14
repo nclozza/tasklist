@@ -23,6 +23,9 @@ const useStyles = makeStyles(() => ({
   circularProgress: {
     marginLeft: "50%",
   },
+  emptyTasks: {
+    textAlign: "center",
+  },
 }));
 
 const MainComponent = ({
@@ -48,6 +51,9 @@ const MainComponent = ({
           top={10}
           className={classes.circularProgress}
         />
+      )}
+      {(!tasks || tasks.length === 0) && !loadingGetTasks && (
+        <p className={classes.emptyTasks}>There are no tasks to show</p>
       )}
       <Grid container spacing={3}>
         {tasks.map((task) => {
